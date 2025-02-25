@@ -41,6 +41,6 @@ This project is under the MIT Licence.
 Credits:
 
 1. Kgonthe Radebe (Developer)
-2. oogle fonts for "Inter" font family
+2. Google fonts for "Inter" font family
 3. Unsplash for Free Use pictures
 4. Canva AI for generated Corporate Memphis illustration (Commented out currently)
