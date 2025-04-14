@@ -2,46 +2,50 @@ Grocer.ease
 
 About:
 
-Grocerease is a web-based application designed to help users organize their weekly grocery shopping lists efficiently. 
-The website provides a seamless user experience with an intuitive interface for managing shopping lists, profile settings, as well as weekly savings. 
+Grocerease is a web-based application designed to help users organise their weekly grocery shopping lists efficiently. 
+The website provides a seamless user experience with an intuitive interface for managing shopping lists, submitting items, and viewing personlised routes.
 My design incorporates a fun, playful aesthetic to make grocery shopping enjoyable.
 
 Features:
 
-- Home page (index.html): A landing page meant to be welcoming and warm with its greeting and weekly savings information.
+- Homepage (index.html): A landing page meant to be welcoming and warm with it's greeting and weekly savings information.
 - Your Lists page (list.html): Page where one can create and manage their grocery lists.
-- Your Profile page (profile.html): A basic profile page with bio information, settings, and account management options (currently disabled)
-- (Improved) Responsiveness
-- Backend implementation with Express.js, featuring multiple routes including a dynamic route.
-- Form submission (form.html): Users can submit grocery items, and they will be processed on the backend.
-- Dynamic Route (/user/username): Personalised page based on username provided.
-- Error Handling: An error 404 page to handle incorrct routes.
+- Your Profile page (profile.html): A basic profile page with bio information, seetings, and account management options (currently disabled)
++ Responsiveness.
+- Routes:
+    - Homepage (/): Displays a greeting and the current list of grocery items from the database.
+    - Submit form (/submit): Allows users to submit grocery items through a form. Which are added to the databse and rendered dynamically.
+    - Dynamic Route (/user/username): Personalised page based on user's username
+    - About PAge (/): Describes the app and it's purpose.
+- CRUD Functionality:
+    - Create: Add new items to grocery list.
+    - Read: View all items on homepage.
+    - Update: Edit existing items.
+    - Delete: Remove items from grocery list.
+- Error handeling: Displays 404 error message for unknown routes.
+- Backend: Backend is built using Express.js with a SQLite Database connection.
+- Templating: Uses EJS to render items dynamically within the HTML. 
 
 Software and Tech used:
 
-- HTML5: to structure webpages
-- CSS3: for styling and implementation of media queries
-- JavaScript (Node.js & Express.js) to create backend 
-
-Usage:
-
-1. Start at Home Page for greeting and weekly savings.
-2. Navigate to My Lists page to create and manage lsits
-3. Lastly, My Profile page for simple settings and account management
-4. Use submit form to add grocery items
-
-Known issues:
-
-- Site doesn't have a database connection (will be implemented in future versions)
-- Profile page functions aren't active yet
+- HTML5: to structure webpages.
+- CSS3: for styling and implementation of media queries.
+- JavaScript: For backend logic and routing.
+- SQLite3: Used for stoeing grocery items. 
+- EJS: Render dynamic content.
 
 Installation:
 
-1. Clone the repo 
-2. Open the project folder
-3. Open index.html in browser
-4. Start server
-5. Open http://localhost:3000 in the local browser.
+1. Clone the repository.
+2. Install dependancies. 
+3. Start the server.
+4. Open browser and visit localhost:3000
+
+Known issues:
+
+- Profile settings are currently inactive.
+- Static pages do not reflect current database.
+- User login capabilities and account handling to be added in future versions. 
 
 Licence:
 
@@ -53,3 +57,6 @@ Credits:
 2. Google fonts for "Inter" font family
 3. Unsplash for Free Use pictures
 4. Canva AI for generated Corporate Memphis illustration (Commented out currently)
+5. ChatGPT for minor debugging issues.
+
+Happy shopping! 

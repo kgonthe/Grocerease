@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROCER.EASE - Your Lists</title>
+</head>
+
+<body>
+    <h1>Welcome to Grocerease!</h1>
+    <p>Add, update, and delete your grocery items below.</p>
+    <ul>
+        <% groceries.forEach(item => { %>
+            <li>
+                <%= item.item %>
+                <form action="/groceries/delete/<%= item.id %>" method="post" style="display:inline;">
+                    <button type="submit">Delete!</button>
+                </form>
+
+                <form action="/groceries/update/<%= item.id %>" method="post" style="display:inline;">
+                    <input type="text" name="item" value="<%= item.item %>" required>
+                    <button type="submit">Update</button>
+                </form>
+            </li>
+          <% }) %>
+    </ul>
+
+<form action="/groceries" method="post">
+    <input type="text" name="item" placeholder="Add grocery item" required>
+    <button type="submit">Add</button>
+</form>
+</body>
+</html>
